@@ -1,0 +1,3 @@
+EUMETSAT under the frameworks of the Copernicus Programme
+
+Jupyter notebook developers: Hayley Evers-King, Julia Wagemann, Benjamin Loveday, Oliver Clements
