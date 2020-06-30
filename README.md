@@ -1,6 +1,6 @@
-# Welcome to WEkEO Training
+# Welcome to WEkEO Jupyter Lab
 
-**wekeo-training** is a repository of Python based tools to introduce you to the WEkEO DIAS (Data Information
+**wekeo-jupyter-lab** is a repository of Python based tools to introduce you to the WEkEO DIAS (Data Information
 and Access System) and its Jupyter Lab. The content includes notebooks explaining WEkEO and the Jupyter Lab environment and
 how to use the Harmonised Data Access (HDA) that is fundamental to WEkEO. Within the submodules of this repository are 
 tutorials and case studies, using data from the Copernicus Programme that are available on WEkEO and written by expert trainers
