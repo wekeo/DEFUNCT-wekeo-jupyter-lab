@@ -1,26 +1,30 @@
 {
     "datasetId": "EO:EUM:DAT:SENTINEL-3:OL_1_EFR___",
     "stringChoiceValues": [
-        {
-            "name": "timeliness",
-            "value": "Non Time Critical"
-        }
+    {
+        "name": "platformname",
+        "value": "Sentinel-3"
+    },
+    {
+        "name": "producttype",
+        "value": "OL_1_EFR___"
+    }
     ],
     "dateRangeSelectValues": [
         {
-            "name": "dtrange",
-            "start": "2019-08-09T09:24:19.000Z",
-            "end": "2019-08-09T09:29:19.000Z"
+            "name": "position",
+            "start": "2019-08-09T09:24:00.000Z",
+            "end": "2019-08-09T09:29:00.000Z"
         }
     ],
     "boundingBoxValues": [
         {
             "name": "bbox",
             "bbox": [
-                -180,
-                -90,
-                180,
-                90
+                8.090703316656588,
+                53.05275533564893,
+                28.976803001163756,
+                66.3943530513707
             ]
         }
     ]

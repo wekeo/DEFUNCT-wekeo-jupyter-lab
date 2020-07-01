@@ -1,16 +1,20 @@
 {
     "datasetId": "EO:EUM:DAT:SENTINEL-3:SL_2_WST___",
-    "stringChoiceValues": [
-        {
-            "name": "timeliness",
-            "value": "Non Time Critical"
-        }
-    ],
     "dateRangeSelectValues": [
         {
-            "name": "dtrange",
+            "name": "position",
             "start": "2019-09-08T05:00:00.000Z",
             "end": "2019-09-08T09:00:00.000Z"
+        }
+    ],
+    "stringChoiceValues": [
+        {
+            "name": "platformname",
+            "value": "Sentinel-3"
+        },
+        {
+            "name": "producttype",
+            "value": "SL_2_WST___"
         }
     ]
 }
