@@ -32,12 +32,14 @@ makes use of functions defined in the [HDA API functions notebook](./wekeo-hda/h
 
 After this, you can look at some of the thematic submodules provided here:
 
-* [Ocean Training] (./ocean)
+* [Ocean] (./ocean)
 
 ## How to use this material
 
-If you are currently on the WEkEO JupyterLab you're already in the right place and can start exploring! If you are on GitHub/Lab you can visit 
-www.wekeo.eu, register for an account and enter the JupyterLab where you will find this code already set up for you to use.
+If you are on GitHub/Lab you can visit 
+www.wekeo.eu, register for an account and enter the JupyterLab - then follow the instructions below. 
+
+If you are currently on the WEkEO JupyterLab you're already in the right place and can start. To clone this repository in to the WEkEO JupyterLab environment open a terminal in the WEkEO JupyterLab, type << cd public >> followed by << bash wekeo-git-clone.sh https://github.com/wekeo/wekeo-jupyter-lab.git >> This will create a clone of this repository of notebooks in your home directory. You can use the same shell script to clone any external repository you like.
 
 You can also use this code on your own computer/Jupyter Lab server, however you won't have the fast access provided by the HDA when within the WEkEO infrastructure.
 

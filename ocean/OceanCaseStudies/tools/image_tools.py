@@ -43,37 +43,83 @@ def spheric_dist(lat1,lat2,lon1,lon2,mode='global'):
         dist = R_earth*arc
     elif mode=='local':
         # Compute the distances with local approximation
-        xdist = [lon2-lon1] * np.cos(0.5*[lat2+lat1])
+        xdist = (lon2-lon1) * np.cos(0.5*(lat2+lat1))
         ydist = lat2-lat1
-        dist = R_earth*[xdist**2+ydist**2]^0.5
+        dist = R_earth*(xdist**2+ydist**2)**0.5
 
     return dist 
 
-def subset_image(grid_lat, grid_lon, plot_extents):
+def subset_image(grid_lat, grid_lon, plot_extents, corners=2, \
+                 mode='global', data_type='granule', verbose=False):
     '''
      Cuts a box out of an image using the grid indices
      for the image corners. BEWARE USING THIS ON HALF-ORBIT,
      FULL-ORBIT or POLAR DATA. Uses spheric distance 
      calculator to find nearest points.
+     
+     The data_type option is designed to cope with L1 swath data
+     for half or full orbits, as the data is very large. The 
+     workaround is to subsample in the along track direction.
     '''
+    
+    if data_type == 'swath':
+        orig_shape = np.shape(grid_lat)
+        if verbose:
+            print('Subsampling in along track direction...')
+        # find longest axis:
+        along_traxis = np.where(np.shape(grid_lat) \
+                       == np.nanmax(np.shape(grid_lat)))[0][0]
+        if along_traxis == 0:
+            grid_lat = grid_lat[0::10, :]
+            grid_lon = grid_lon[0::10, :]
+        elif along_traxis == 1:
+            grid_lat = grid_lat[:, 0::10]
+            grid_lon = grid_lon[:, 0::10]
+
     # bottom left
-    dist = spheric_dist(plot_extents[2], grid_lat, plot_extents[0], grid_lon)
+    dist = spheric_dist(plot_extents[2], grid_lat, plot_extents[0],\
+                        grid_lon, mode=mode)
     i0, j0 = np.unravel_index(dist.argmin(), dist.shape)
     
     # bottom right
-    dist = spheric_dist(plot_extents[2], grid_lat, plot_extents[1], grid_lon)
+    dist = spheric_dist(plot_extents[2], grid_lat, plot_extents[1],\
+                        grid_lon, mode=mode)
     i1, j1 = np.unravel_index(dist.argmin(), dist.shape)    
     
     # top right
-    dist = spheric_dist(plot_extents[3], grid_lat, plot_extents[1], grid_lon)
+    dist = spheric_dist(plot_extents[3], grid_lat, plot_extents[1],\
+                        grid_lon, mode=mode)
     i2, j2 = np.unravel_index(dist.argmin(), dist.shape)
     
     # top left
-    dist = spheric_dist(plot_extents[3], grid_lat, plot_extents[0], grid_lon)
+    dist = spheric_dist(plot_extents[3], grid_lat, plot_extents[0],\
+                        grid_lon, mode=mode)
     i3, j3 = np.unravel_index(dist.argmin(), dist.shape)
-    
-    return min([i0, i1, i2, i3]), max([i0, i1, i2, i3]), min([j0, j1, j2, j3]), max([j0, j1, j2, j3])
-    
+
+    if data_type == 'swath':
+        if along_traxis == 0:
+            i0 = min(orig_shape[0],i0*10) 
+            i1 = min(orig_shape[0],i1*10) 
+            i2 = min(orig_shape[0],i2*10) 
+            i3 = min(orig_shape[0],i3*10) 
+        if along_traxis == 1:
+            j0 = min(orig_shape[1],j0*10) 
+            j1 = min(orig_shape[1],j1*10) 
+            j2 = min(orig_shape[1],j2*10) 
+            j3 = min(orig_shape[1],j3*10) 
+
+    if corners == 4:
+        if verbose:
+            print('Defining area based on all four corners of the "box"')
+        return min([i0, i1, i2, i3]), max([i0, i1, i2, i3]), min([j0, j1, j2, j3]), max([j0, j1, j2, j3])
+    elif corners == 2:
+        if verbose:
+            print('Defining area based on bottom left and top right corners')
+        return min([i0, i2]), max([i0, i2]), min([j0, j2]), max([j0, j2])
+    else:
+        print('Please select either 2 or 4 corners...bailing')
+        return None
+            
 def reduce_image(grid, grid_factor):
     '''
      Re-sample image on a coarser grid
