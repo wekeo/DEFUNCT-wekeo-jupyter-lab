@@ -32,7 +32,8 @@ makes use of functions defined in the [HDA API functions notebook](./wekeo-hda/h
 
 After this, you can look at some of the thematic submodules provided here:
 
-* [Ocean] (./ocean)
+* [WEkEO] Harmonised Data Acces (./wekeo-hda) - learn how to access data using WEkEO's data access API
+* [Ocean] (./ocean) - learn about marine data from Sentinel-3 and the Copernicus Marine Service and how it can be used for different applications.
 
 ## How to use this material
 
