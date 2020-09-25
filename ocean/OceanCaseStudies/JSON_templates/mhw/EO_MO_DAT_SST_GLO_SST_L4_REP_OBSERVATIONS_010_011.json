@@ -1,0 +1,36 @@
+{
+    "datasetId": "EO:MO:DAT:SST_GLO_SST_L4_REP_OBSERVATIONS_010_011",
+    "stringChoiceValues": [
+        {
+            "name": "product",
+            "value": "METOFFICE-GLO-SST-L4-RAN-OBS-SST"
+        }
+    ],
+    "multiStringSelectValues": [
+        {
+            "name": "variables",
+            "value": [
+                "analysed_sst",
+                "mask"
+            ]
+        }
+    ],
+    "dateRangeSelectValues": [
+        {
+            "name": "dtrange",
+            "start": "%DATE_START%",
+            "end": "%DATE_END%"
+        }
+    ],
+    "boundingBoxValues": [
+        {
+            "name": "bbox",
+            "bbox": [
+                -150.0,
+                20.0,
+                -120.0,
+                40.0
+            ]
+        }
+    ]
+}

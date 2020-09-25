@@ -1,0 +1,31 @@
+{
+    "datasetId": "EO:EUM:DAT:SENTINEL-3:OL_1_EFR___",
+    "stringChoiceValues": [
+    {
+        "name": "platformname",
+        "value": "Sentinel-3"
+    },
+    {
+        "name": "producttype",
+        "value": "OL_1_EFR___"
+    }
+    ],
+    "dateRangeSelectValues": [
+        {
+            "name": "position",
+            "start": "2020-08-31T10:10:00.000Z",
+            "end": "2020-08-31T10:15:00.000Z"
+        }
+    ],
+    "boundingBoxValues": [
+        {
+            "name": "bbox",
+            "bbox": [
+                0.88,
+                38.08,
+                4.15,
+                40.05
+            ]
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "datasetId": "EO:EUM:DAT:SENTINEL-3:OL_2_WRR___",
+    "stringChoiceValues": [
+    {
+        "name": "platformname",
+        "value": "Sentinel-3"
+    },
+    {
+        "name": "producttype",
+        "value": "OL_2_WRR___"
+    },
+    { 
+        "name": "timeliness",
+        "value": "Non Time Critical"
+    }
+    ],
+    "dateRangeSelectValues": [
+        {
+            "name": "position",
+            "start": "2020-05-31T09:35:00.000Z",
+            "end": "2020-05-31T10:20:00.000Z"
+        }
+    ]
+}

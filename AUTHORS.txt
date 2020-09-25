@@ -1,0 +1,4 @@
+EUMETSAT and Mercator Ocean International under the frameworks of the Copernicus Programme
+
+Jupyter notebook developers: Hayley Evers-King, Julia Wagemann, Benjamin Loveday, Oliver Clements,
+Fabrice Messal, Renaud Dussurget, Jonathan Brouillet, Laia Romero

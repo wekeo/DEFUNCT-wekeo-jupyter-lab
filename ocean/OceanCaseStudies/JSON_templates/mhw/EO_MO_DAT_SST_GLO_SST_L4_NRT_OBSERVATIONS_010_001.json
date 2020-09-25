@@ -1,0 +1,39 @@
+{
+    "datasetId": "EO:MO:DAT:SST_GLO_SST_L4_NRT_OBSERVATIONS_010_001:METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2",
+    "stringChoiceValues": [
+        {
+            "name": "service",
+            "value": "SST_GLO_SST_L4_NRT_OBSERVATIONS_010_001-TDS"
+        },
+        {
+             "name": "product",
+             "value": "METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2"
+        }
+    ],
+    "multiStringSelectValues": [
+        {
+            "name": "variables",
+            "value": [
+                "analysed_sst"
+            ]
+        }
+    ],
+    "dateRangeSelectValues": [
+        {
+            "name": "position",
+            "start": "%DATE_START%",
+            "end": "%DATE_END%"
+        }
+    ],
+    "boundingBoxValues": [
+        {
+            "name": "bbox",
+            "bbox": [
+                -160.0,
+                15.0,
+                -150.0,
+                25.0
+            ]
+        }
+    ]
+}
