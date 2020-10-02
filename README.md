@@ -46,6 +46,7 @@ If you are on GitHub/Lab you can visit www.wekeo.eu, register for an account and
 If you are currently on the WEkEO JupyterLab you're already in the right place and can start. To clone this repository in to the WEkEO JupyterLab environment open a terminal in the WEkEO JupyterLab, type 
   > `cd public`<br>
   > `bash wekeo-git-clone.sh https://github.com/wekeo/wekeo-jupyter-lab.git`<br> 
+ 
  This will create a clone of this repository of notebooks in your home directory. You can use the same shell script to clone any external repository you like.
 
 You can also use this code on your own computer/Jupyter Lab server, however you won't have the fast access provided by the Harmonized Data Access as part of the WEkEO infrastructure.
