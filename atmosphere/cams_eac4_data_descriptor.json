@@ -2,7 +2,7 @@
   "datasetId": "EO:ECMWF:DAT:CAMS_GLOBAL_REANALYSIS_EAC4",
   "boundingBoxValues": [
     {
-      "name": "bbox",
+      "name": "area",
       "bbox": [
         130,
         -50,
