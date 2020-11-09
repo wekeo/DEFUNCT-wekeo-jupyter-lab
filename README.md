@@ -12,15 +12,17 @@ is combined in one place. The first notebooks recommended below will give you an
 of the features that the Jupyter Notebook environment offers. 
 
 ## Copernicus Data
-The notebooks contained within the repository feature data from the `Copernicus Marine Monitoring Service` and the `Copernicus Atmosphere Monitoring Service`, including Sentinel-5p and Sentinel-3 data:
+The notebooks contained within the repository feature data from the `Copernicus Marine Monitoring Service`, the `Copernicus Atmosphere Monitoring Service`, and the `Copernicus Climate Change Service`, including Sentinel-5p, Sentinel-3 and reanalysis data:
 * `MARINE`
-   * Sentinel-3 Level 2 Ocean Colour, Sea Surface Temperature, and Altimetry
-   * Copernicus Marine Service products
+  * Sentinel-3 Level 2 Ocean Colour, Sea Surface Temperature, and Altimetry
+  * Copernicus Marine Service products
 * `ATMOSPHERE`
   * Sentinel-3 OLCI Level 1B
   * Sentinel-5p TROPOMI Carbon Monoxide
   * Copernicus Atmosphere Monitoring Service (CAMS) Global Reanalysis (EAC4)
-
+* `CLIMATE`
+  * Global Reanalysis (ERA5)
+  * Regional Reanalysis (UERRA)
 
 ## Where to find what you need
 The content of this repository is suitable for those completely new to WEkEO, Python, Copernicus data
@@ -38,6 +40,7 @@ After this, you can look at some of the thematic submodules provided here:
 * [WEkEO Harmonised Data Access](https://github.com/wekeo/wekeo-jupyter-lab/tree/master/wekeo-hda) - learn how to access data using WEkEO's data access API
 * [Ocean](https://github.com/wekeo/wekeo-jupyter-lab/tree/master/ocean) - learn about marine data from Sentinel-3 and the Copernicus Marine Service and how it can be used for different applications.
 * [Atmosphere](https://github.com/wekeo/wekeo-jupyter-lab/tree/master/atmosphere) - learn about WEkEO's offer of atmospheric composition data and example applications, including exercises.
+* [Climate](https://github.com/wekeo/wekeo-jupyter-lab/tree/master/climate) - learn about WEkEO's offer of climate data and example applications, including exercises.
 
 ## How to use this material
 
