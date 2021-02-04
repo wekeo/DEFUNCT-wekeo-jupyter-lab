@@ -24,6 +24,7 @@ The notebooks contained within the repository feature data from the `Copernicus 
   * Global Reanalysis (ERA5)
   * Regional Reanalysis (UERRA)
 * `LAND`
+  * Sentinel-2 data
 
 ## Where to find what you need
 The content of this repository is suitable for those completely new to WEkEO, Python, Copernicus data
