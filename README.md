@@ -23,6 +23,8 @@ The notebooks contained within the repository feature data from the `Copernicus 
 * `CLIMATE`
   * Global Reanalysis (ERA5)
   * Regional Reanalysis (UERRA)
+* `LAND`
+  * Sentinel-2 data
 
 ## Where to find what you need
 The content of this repository is suitable for those completely new to WEkEO, Python, Copernicus data
@@ -41,6 +43,7 @@ After this, you can look at some of the thematic submodules provided here:
 * [Ocean](https://github.com/wekeo/wekeo-jupyter-lab/tree/master/ocean) - learn about marine data from Sentinel-3 and the Copernicus Marine Service and how it can be used for different applications.
 * [Atmosphere](https://github.com/wekeo/wekeo-jupyter-lab/tree/master/atmosphere) - learn about WEkEO's offer of atmospheric composition data and example applications, including exercises.
 * [Climate](https://github.com/wekeo/wekeo-jupyter-lab/tree/master/climate) - learn about WEkEO's offer of climate data and example applications, including exercises.
+* [Land](https://github.com/wekeo/wekeo-jupyter-lab/tree/master/climate) - learn about WEkEO's offer of land data and example applications.
 
 ## How to use this material
 
