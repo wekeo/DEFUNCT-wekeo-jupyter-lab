@@ -187,7 +187,15 @@ def get_job_id(hda_dict, data):
     get_request_status(hda_dict)
     return hda_dict
 
-def get_request_status(hda_dict):
+def report_timing_control(t_step=5, t_max=60):
+    """
+    Controls report timing
+    """
+    t_wait = min(t_step, t_max)
+    print('Next check in {} seconds'.format(t_wait))
+    time.sleep(t_wait)
+
+def get_request_status(hda_dict, t_step=5, t_max=60):
     """ 
     Requests the status of the process to assign a job ID.
     
@@ -197,12 +205,10 @@ def get_request_status(hda_dict):
                   interact with the HDA API
     """
     status = "not started"
-    count = 0
+    n_messages = 0
     while (status != "completed"):
-        count = count + 1
-        if count > 20:
-            print('Waiting 5 seconds...')
-            time.sleep(5)
+        n_messages = n_messages+1
+        report_timing_control(t_step*n_messages, t_max)
         response = requests.get(hda_dict['broker_endpoint'] + \
                    '/datarequest/status/' + hda_dict['job_id'],\
                    headers=hda_dict['headers'])
@@ -282,7 +288,7 @@ def get_order_ids(hda_dict):
     hda_dict['order_status_response']=response
     return hda_dict
 
-def get_order_status(hda_dict,order_id):
+def get_order_status(hda_dict, order_id, t_step=5, t_max=60):
     """ 
     Requests the status of assigning an order ID for a data file.
     
@@ -296,12 +302,10 @@ def get_order_status(hda_dict,order_id):
         Returns the response of assigning an order ID.
     """
     status = "not started"
-    count = 0
+    n_messages = 0
     while (status != "completed"):
-        count = count + 1
-        if count > 20:
-            print('Waiting 5 seconds...')
-            time.sleep(5)
+        n_messages = n_messages+1
+        report_timing_control(t_step*n_messages, t_max)
         response = requests.get(hda_dict['broker_endpoint'] +\
                    '/dataorder/status/' + order_id, \
                    headers=hda_dict['headers'])
