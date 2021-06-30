@@ -1,0 +1,31 @@
+{
+  "datasetId": "EO:EUM:DAT:SENTINEL-3:OL_2_WFR___",
+  "boundingBoxValues": [
+    {
+      "name": "bbox",
+      "bbox": [
+        -5.125188001376062,
+        35.53586737224044,
+        -4.172304069230021,
+        36.360919056514945
+      ]
+    }
+  ],
+  "dateRangeSelectValues": [
+    {
+      "name": "position",
+      "start": "2021-06-28T00:00:00.000Z",
+      "end": "2021-06-29T00:00:00.000Z"
+    }
+  ],
+  "stringChoiceValues": [
+    {
+      "name": "platformname",
+      "value": "Sentinel-3"
+    },
+    {
+      "name": "producttype",
+      "value": "OL_2_WFR___"
+    }
+  ]
+}
