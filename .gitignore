@@ -4,5 +4,5 @@
 
 # data sets
 *.nc
-ocean\OceanCaseStudies\products\
-ocean\Sentinel3\products\
+ocean/OceanCaseStudies/products/
+ocean/Sentinel3/products/
