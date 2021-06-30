@@ -1,0 +1,8 @@
+
+# Jupyter/iPython checkpoints
+.ipynb_checkpoints
+
+# data sets
+*.nc
+ocean\OceanCaseStudies\products\
+ocean\Sentinel3\products\

@@ -1,9 +1,13 @@
 {
-    "datasetId": "EO:MO:DAT:SST_GLO_SST_L4_REP_OBSERVATIONS_010_011",
+    "datasetId": "EO:MO:DAT:SST_GLO_SST_L4_REP_OBSERVATIONS_010_011:METOFFICE-GLO-SST-L4-REP-OBS-SST",
     "stringChoiceValues": [
         {
-            "name": "product",
-            "value": "METOFFICE-GLO-SST-L4-RAN-OBS-SST"
+            "name": "service",
+            "value": "SST_GLO_SST_L4_REP_OBSERVATIONS_010_011-TDS"
+        },
+        {
+             "name": "product",
+             "value": "METOFFICE-GLO-SST-L4-REP-OBS-SST"
         }
     ],
     "multiStringSelectValues": [
@@ -17,7 +21,7 @@
     ],
     "dateRangeSelectValues": [
         {
-            "name": "dtrange",
+            "name": "position",
             "start": "%DATE_START%",
             "end": "%DATE_END%"
         }
@@ -27,9 +31,9 @@
             "name": "bbox",
             "bbox": [
                 -150.0,
-                20.0,
-                -120.0,
-                40.0
+                42.5,
+                -135.0,
+                47.5
             ]
         }
     ]

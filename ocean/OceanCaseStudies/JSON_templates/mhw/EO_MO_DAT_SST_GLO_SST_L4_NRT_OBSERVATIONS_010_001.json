@@ -14,13 +14,14 @@
         {
             "name": "variables",
             "value": [
-                "analysed_sst"
+                "analysed_sst",
+                "mask"
             ]
         }
     ],
     "dateRangeSelectValues": [
         {
-            "name": "position",
+            "name": "dtrange",
             "start": "%DATE_START%",
             "end": "%DATE_END%"
         }
@@ -29,10 +30,10 @@
         {
             "name": "bbox",
             "bbox": [
-                -160.0,
-                15.0,
                 -150.0,
-                25.0
+                42.5,
+                -135.0,
+                47.5
             ]
         }
     ]

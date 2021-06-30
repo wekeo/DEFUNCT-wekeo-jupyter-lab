@@ -218,7 +218,7 @@ def get_request_status(hda_dict, t_step=5, t_max=60):
         else:
             print("Error: Unexpected response {}".format(response))
 
-def get_results_list(hda_dict):
+def get_results_list(hda_dict, page=0, verbose=False):
     """ 
     Generates a list of filenames to be available for download
     
@@ -231,16 +231,20 @@ def get_results_list(hda_dict):
         Returns the dictionary including the list of filenames to be 
         downloaded.
     """
-    params = {'page':'0', 'size':'5'}
+    params = {'page':page}
     response = requests.get(hda_dict['broker_endpoint'] + \
                '/datarequest/jobs/' + hda_dict['job_id'] + \
                '/result', headers=hda_dict['headers'], params = params)
     results = json.loads(response.text)
     hda_dict['results']=results
 
-    print("************** Results *******************************")
-    print(json.dumps(results, indent=4, sort_keys=True))
-    print("*******************************************")
+    if verbose:
+        print("************** Results *******************************")
+        print(json.dumps(results, indent=4, sort_keys=True))
+        print("*******************************************")
+    else:
+        for item in results['content']:
+            print(item['filename'])
     
     return hda_dict
 
