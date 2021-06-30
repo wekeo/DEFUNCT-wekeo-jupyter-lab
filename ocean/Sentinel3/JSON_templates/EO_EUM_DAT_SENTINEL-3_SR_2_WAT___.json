@@ -1,20 +1,31 @@
 {
-    "datasetId": "EO:EUM:DAT:SENTINEL-3:SR_2_WAT___",
-    "dateRangeSelectValues": [
-        {
-            "name": "position",
-            "start": "2020-07-13T13:59:00.000Z",
-            "end": "2020-07-13T14:00:00.000Z"
-        }
-    ],
-    "stringChoiceValues": [
-        {
-            "name": "platformname",
-            "value": "Sentinel-3"
-        },
-        {
-            "name": "producttype",
-            "value": "SR_2_WAT___"
-        }
-    ]
+  "datasetId": "EO:EUM:DAT:SENTINEL-3:SR_2_WAT___",
+  "boundingBoxValues": [
+    {
+      "name": "bbox",
+      "bbox": [
+        -14.67596175833406,
+        35.626571377552,
+        4.905335600154725,
+        45.31738814006479
+      ]
+    }
+  ],
+  "dateRangeSelectValues": [
+    {
+      "name": "position",
+      "start": "2020-08-04T00:00:00.000Z",
+      "end": "2020-09-04T00:00:00.000Z"
+    }
+  ],
+  "stringChoiceValues": [
+    {
+      "name": "platformname",
+      "value": "Sentinel-3"
+    },
+    {
+      "name": "producttype",
+      "value": "SR_2_WAT___"
+    }
+  ]
 }
