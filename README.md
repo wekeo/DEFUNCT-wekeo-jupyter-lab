@@ -1,3 +1,6 @@
+PLEASE NOTE THAT THIS REPOISITORY IS NO LONGER ACTIVELY MAINTAINED. PLEASE SEE RELEVANT THEMATIC REPOSITORIES FOR LATEST CODE. 
+
+
 # Welcome to WEkEO Jupyter Lab
 
 **wekeo-jupyter-lab** is a repository of Python based tools to introduce you to the [WEkEO DIAS (Data Information
